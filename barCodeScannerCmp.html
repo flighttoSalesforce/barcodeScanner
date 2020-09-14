@@ -1,0 +1,23 @@
+<template>
+    <div style="background-color:white">
+        <lightning-card  variant="Narrow"  title="Barcode Scanner" icon-name="standard:pricebook">
+            <div class="slds-p-horizontal_small">
+                <div class="slds-text-align_center">
+                    <lightning-button
+                        variant="brand"
+                        class="slds-var-m-left_x-small"
+                        disabled={scanButtonDisabled}
+                        icon-name="utility:cases"
+                        label="Scan Barcode"
+                        title="Open a camera view and look for a barcode to scan"
+                        onclick={handleBeginScanClick}>
+                    </lightning-button>
+                </div>
+                <div class="slds-var-m-vertical_large slds-var-p-vertical_medium slds-text-align_center slds-border_top slds-border_bottom">
+                    Scanned barcode value is:
+                    <span class="slds-text-heading_small">{scannedBarcode}</span>
+                </div>
+            </div>
+        </lightning-card>
+    </div>
+</template>
